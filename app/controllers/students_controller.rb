@@ -16,11 +16,13 @@ class StudentsController < ApplicationController
   end
 
   private
-
+  
+    #find the student by id
     def set_student
       @student = Student.find(params[:id])
     end
     
+    #change the student's status
     def change_status(student)
       if @student.active == false
         @student.active = true
