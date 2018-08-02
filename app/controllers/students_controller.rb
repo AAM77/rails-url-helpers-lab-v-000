@@ -9,12 +9,6 @@ class StudentsController < ApplicationController
     @student = set_student
     @student.active ? @status = 'active' : @status = 'inactive'
   end
-  
-  def activate
-    @student = set_student
-    change_status(@student)
-    render 'students/show.html'
-  end
 
   private
   
