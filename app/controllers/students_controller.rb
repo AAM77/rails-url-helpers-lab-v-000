@@ -7,12 +7,12 @@ class StudentsController < ApplicationController
 
   def show
     @student = set_student
+    @active_status = @student.active
   end
   
   def activate
     @student = set_student
     change_status(@student)
-    
   end
 
   private
