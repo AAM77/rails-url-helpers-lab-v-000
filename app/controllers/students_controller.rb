@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = set_student
-    @student.active ? @status = 'inactive' : @status = 'active'
+    @student.active ? @status = 'active' : @status = 'inactive'
   end
   
   def activate
