@@ -23,9 +23,9 @@ class StudentsController < ApplicationController
     
     def change_status
       if @student.active == false
-      @student.active = true
-    else
-      @student.active = false
+        @student.active = true
+      else
+        @student.active = false
+      end
     end
-  end
 end
