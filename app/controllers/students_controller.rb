@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
     redirect_to student_path(@student)
   end
 
-  #PRIVATE METHODS
+  #PRIVATE METHODS - available to only this class
   private
   
     #find the student by id
