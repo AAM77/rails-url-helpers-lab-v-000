@@ -11,11 +11,8 @@ class StudentsController < ApplicationController
   
   def activate
     @student = set_student
-    if @student.active == false
-      @student.active = true
-    else
-      @student.active = false
-    end
+    
+    
   end
 
   private
@@ -23,4 +20,12 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
+    
+    def change_status
+      if @student.active == false
+      @student.active = true
+    else
+      @student.active = false
+    end
+  end
 end
