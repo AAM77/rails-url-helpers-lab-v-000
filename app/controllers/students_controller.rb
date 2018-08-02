@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   
   def active
     @student = set_student
-    change_status(@student)
+    @student.active = change_status(@student)
     @
   end
 
