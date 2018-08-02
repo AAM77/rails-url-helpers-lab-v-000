@@ -9,6 +9,9 @@ class StudentsController < ApplicationController
     @student = set_student
     @student.active ? @status = 'active' : @status = 'inactive'
   end
+  
+  def active
+  end
 
   private
   
