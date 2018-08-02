@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
   def activate
     @student = set_student
     change_status(@student)
-    render 'students/show'
+    render 'students/show.html'
   end
 
   private
