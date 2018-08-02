@@ -11,6 +11,11 @@ class StudentsController < ApplicationController
   
   def activate
     @student = set_student
+    if @student.active == false
+      @student.active = true
+    else
+      @student.active = false
+    end
   end
 
   private
