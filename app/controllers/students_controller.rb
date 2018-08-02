@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   
   def active
     @student = set_student
-    @student.active = change_status(@student)
+    change_status(@student)
     @student.save
     redirect_to student_path(@student)
   end
