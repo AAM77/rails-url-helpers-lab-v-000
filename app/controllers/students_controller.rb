@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
   
   def activate
     @student = set_student
-    
+    change_status(@student)
     
   end
 
@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
     
-    def change_status
+    def change_status(student)
       if @student.active == false
         @student.active = true
       else
