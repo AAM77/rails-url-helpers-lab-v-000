@@ -27,7 +27,7 @@ class StudentsController < ApplicationController
     
     #change the student's status
     def change_status(student)
-      !student.active
+      student.active = !student.active
       student.save
     end
 end
